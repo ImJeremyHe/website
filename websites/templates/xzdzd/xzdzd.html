@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+<div class="search-wrap">
+        <div class="search-container">
+            <form method="post" id="search-form" target="_blank">
+                <div class="form-item">
+                        <label>基本周期：</label><input name="period" placeholder="周期小于7">
+                </div>
+                <div class="form-item">
+                        <label>场地类型：</label><input name="type" placeholder="场地类型： 1~4">
+                </div>
+                <div class="form-item">
+                  <label>PGA：</label><input name="pga" placeholder="输入PGA下限值(单位为g)，可不填">
+                </div>
+                <div class="form-item">
+                    <input type="radio" name="para" value="t" checked="checked" style="width:20px;height:20px">
+                    使用推荐参数查询
+                    <input type="radio", name="para", value="s" style="width:20px;height:20px">
+                    使用弹性加速度谱查询
+                </div>
+                <button class="search-btn">查询</button>
+                <div class="error-msg">{{ error }}</div>
+                {{ xsrf_form_html() }}
+            </form>
+            <!-- 说明 -->
+            <div class="desc"></div>
+        </div>
+</div>
+
+
+
+</body>
+</html>

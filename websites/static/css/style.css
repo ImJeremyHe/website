@@ -1,0 +1,165 @@
+body,html {
+  background-color: rgba(84,170,230,0.8);
+}
+input {
+  outline: none;
+  padding: 0px;
+  border: 0px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+.search-wrap {
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width:800px;
+  height: 500px;
+  font-size:20px;
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 0 0 6px #e6dfdf;
+  border-radius: 6px;
+}
+.search-container {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.form-item {
+  width: 300px;
+  text-align: left;
+  font-size: 14px;
+  margin: auto;
+  margin-bottom: 12px;
+  line-height: 32px;
+}
+
+label {
+  display: inline-block;
+  width: 70px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.form-item input {
+  width: 212px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding-left: 5px;
+  font-size: 14px;
+  color: #fff;
+  background-color: transparent;
+  transition:box-shadow 200ms;
+}
+
+.form-item input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #eee;
+  font-size: 13px;
+}
+.form-item input::-moz-placeholder { /* Firefox 19+ */
+  color: #eee;
+  font-size: 13px;
+}
+.form-item input:-ms-input-placeholder { /* IE 10+ */
+  color: #eee;
+  font-size: 13px;
+}
+.form-item input:-moz-placeholder { /* Firefox 18- */
+  color: #eee;
+  font-size: 13px;
+}
+
+.form-item input:focus {
+  box-shadow: 0 0 5px #fff;
+}
+
+.search-btn {
+  display: block;
+  width: 300px;
+  height: 32px;
+  background-color: #1B9AF7;
+  color: #fff;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition:background-color 250ms;
+}
+
+.search-btn:hover{
+  background-color:#1b84d1;
+}
+
+.error-msg {
+  margin-top: 16px;
+  font: 14px;
+  text-align: center;
+  color: #333;
+}
+
+.desc {
+  width: 780px;
+  position: absolute;
+  bottom: -100px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 6px;
+  font-size: 15px;
+  color: #fff;
+  padding: 10px 0px 10px 20px;
+}
+
+.result-wrap {
+  margin: 0 auto;
+  width: 1000px;
+  font-size: 20px;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 6px;
+  padding: 30px 20px;
+}
+
+.total {
+  display: inline-block;
+  font-size: 24px;
+
+}
+.item {
+  width:100%;
+  height:36px;
+  border-bottom: 1px solid #5e5c5c;
+  font-size: 18px;
+  line-height: 37px;
+}
+
+.item span {
+  display:inline-block;
+}
+
+.ratio {
+  width:30px;
+  color:#8B6914;
+}
+
+.name {
+  width: 360px;
+}
+
+.period,.pga,.magnitude,.epid {
+  width:120px;
+}
+
+.download {
+  display:inline-block;
+  color:#1B9AF7;
+  margin-left: 25px;
+}

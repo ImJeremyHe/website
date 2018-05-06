@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+<div class="result-wrap">
+    <span class="total">一共有{{ count }}条记录</span>
+    <div class="item">
+        <span class="name"> record_name </span>
+        <span class="period"> 参考值 </span>
+        <span class="pga"> pga/g </span>
+        <span class="magnitude"> 震级 </span>
+        <span class="epid"> 距离/km </span>
+    </div>
+    {% for record in records %}
+        <div class="item">
+            <span class="name">{{ record["name"] }}</span>
+            <span class="period">{{ record[t] }} </span>
+            <span class="pga">{{ record["pga"] }}</span>
+            <span class="magnitude"> {{ record["magnitude"] }} </span>
+            <span class="epid"> {{ record["epid"] }} </span>
+            <a class="download" href={{ '../../static/record/' + record["name"]+".AT2" }}>下载</a>
+            <span class="ratio">{% if record["rank"] %} {{ "%s%%" % int(record["rank"] * 100) }} {% end if %}</span>
+        </div>
+    {% end %}
+</div>
+</body>
