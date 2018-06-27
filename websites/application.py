@@ -2,17 +2,11 @@
 # coding=utf-8
 
 
-import model.user
-import model.main
-import handlers.user
-import handlers.main
 import os.path
-import redis
 import tornado.web
 import torndb
 import tornado.ioloop
 from tornado.options import define, options
-from jinja2 import Environment, FileSystemLoader
 import handlers.xzdzd
 import model.xzdzd
 
@@ -22,7 +16,7 @@ define("mysql_host", default="127.0.0.1", help="mysql_host", type=str)
 define("mysql_port", default=3306, help="mysql_port", type=int)
 define("mysql_user", default="root", help="mysql_user", type=str)
 define("mysql_password", default="123", help="password on mysql", type=str)
-define("database", default="miaomushan", help="database used to the websites", type=str)
+define("database", default="earthquake", help="database used to the websites", type=str)
 
 
 class Application(tornado.web.Application):
@@ -35,8 +29,7 @@ class Application(tornado.web.Application):
             xsrf_cookies=True,
             blog_title="HJM",
             autoescape=None,
-            jinja2=Environment(loader=FileSystemLoader(os.path.join(os.path.dirname(__file__), "templates")),
-                               trim_blocks=True)
+
         )
         all_handlers = [
             (r'/xzdzd', handlers.xzdzd.XzdzdHandler)
